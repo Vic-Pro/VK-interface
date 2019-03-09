@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE961240223310C2004DC276 /* AllFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96123F223310C2004DC276 /* AllFriendsTableViewController.swift */; };
+		CE961242223310EC004DC276 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE961241223310EC004DC276 /* FriendsTableViewCell.swift */; };
+		CE96124522333EB9004DC276 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96124422333EB9004DC276 /* PhotoViewController.swift */; };
+		CE96124722333EDB004DC276 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96124622333EDB004DC276 /* PhotoCollectionViewCell.swift */; };
 		CEAC81662229DC11003363E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC81652229DC11003363E2 /* AppDelegate.swift */; };
 		CEAC81682229DC11003363E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC81672229DC11003363E2 /* ViewController.swift */; };
 		CEAC816B2229DC11003363E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC81692229DC11003363E2 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE96123F223310C2004DC276 /* AllFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFriendsTableViewController.swift; sourceTree = "<group>"; };
+		CE961241223310EC004DC276 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		CE96124422333EB9004DC276 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CE96124622333EDB004DC276 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEAC81622229DC11003363E2 /* MyHomeWork_Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHomeWork_Interface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC81652229DC11003363E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC81672229DC11003363E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE96123E2233101D004DC276 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				CE96123F223310C2004DC276 /* AllFriendsTableViewController.swift */,
+				CE961241223310EC004DC276 /* FriendsTableViewCell.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		CE96124322332FC7004DC276 /* FriendsPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				CE96124422333EB9004DC276 /* PhotoViewController.swift */,
+				CE96124622333EDB004DC276 /* PhotoCollectionViewCell.swift */,
+			);
+			path = FriendsPhoto;
+			sourceTree = "<group>";
+		};
 		CEAC81592229DC11003363E2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +125,8 @@
 		CEAC81642229DC11003363E2 /* MyHomeWork_Interface */ = {
 			isa = PBXGroup;
 			children = (
+				CE96124322332FC7004DC276 /* FriendsPhoto */,
+				CE96123E2233101D004DC276 /* Friends */,
 				CEAC81652229DC11003363E2 /* AppDelegate.swift */,
 				CEAC81672229DC11003363E2 /* ViewController.swift */,
 				CEAC81692229DC11003363E2 /* Main.storyboard */,
@@ -260,7 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAC81942229DC5A003363E2 /* LoginFormController.swift in Sources */,
+				CE961240223310C2004DC276 /* AllFriendsTableViewController.swift in Sources */,
 				CEAC81682229DC11003363E2 /* ViewController.swift in Sources */,
+				CE96124522333EB9004DC276 /* PhotoViewController.swift in Sources */,
+				CE96124722333EDB004DC276 /* PhotoCollectionViewCell.swift in Sources */,
+				CE961242223310EC004DC276 /* FriendsTableViewCell.swift in Sources */,
 				CEAC81662229DC11003363E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
