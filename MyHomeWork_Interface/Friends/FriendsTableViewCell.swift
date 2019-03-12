@@ -11,6 +11,7 @@ import UIKit
 class FriendsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var FriendsName: UILabel!
+    @IBOutlet weak var ContactPhoto: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

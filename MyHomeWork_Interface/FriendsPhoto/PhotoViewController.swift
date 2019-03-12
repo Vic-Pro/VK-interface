@@ -8,18 +8,20 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class PhotoViewController: UICollectionViewController {
 
+    let names = AllFriendsTableViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+      
 
         // Do any additional setup after loading the view.
     }
@@ -44,14 +46,18 @@ class PhotoViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return names.Friends.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactPhotoCell", for: indexPath) as! PhotoCollectionViewCell
     
         // Configure the cell
     
+        let NameInCell = names.Friends[indexPath.row]
+        
+        cell.Name.text = NameInCell
+        
         return cell
     }
 

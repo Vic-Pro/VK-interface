@@ -14,9 +14,17 @@ class AllFriendsTableViewController: UITableViewController {
         "Винни Пух",
         "Пятачок",
         "Ослик Иа",
-        "Заяц1",
+        "Заяц",
         "Сова"
     ]
+    
+    struct Person {
+        
+        let image : UIImage
+        let name : String
+    }
+    
+    let persons = [Person(image: #imageLiteral(resourceName: "ВинниПух"), name: "Винни Пух"), Person(image: #imageLiteral(resourceName: "Пятачок"), name: "Пятачок"), Person(image:#imageLiteral(resourceName: "Ослик Иа"), name: "Ослик Иа"), Person (image: #imageLiteral(resourceName: "Заяц"), name: "Заяц"), Person(image: #imageLiteral(resourceName: "Сова"), name: "Сова")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +45,7 @@ class AllFriendsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Friends.count
+        return persons.count
     }
 
     
@@ -45,9 +53,10 @@ class AllFriendsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsTableViewCell
 
-        let name = Friends[indexPath.row]
+        let person = persons[indexPath.row]
         
-        cell.FriendsName.text = name
+        cell.FriendsName.text = person.name
+        cell.ContactPhoto.image = person.image
 
         return cell
     }

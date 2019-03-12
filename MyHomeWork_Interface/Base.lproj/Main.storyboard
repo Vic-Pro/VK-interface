@@ -124,6 +124,7 @@
                     <connections>
                         <outlet property="LoginTextField" destination="PgQ-kE-Qdo" id="ArG-P8-Ssn"/>
                         <outlet property="PasswordTextField" destination="bLN-0p-Z3p" id="hob-5G-rnh"/>
+                        <outlet property="SignInButton" destination="B73-UV-IIH" id="sVi-Aq-CF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -167,38 +168,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.4956552152" green="0.55640420339999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iQA-FR-Cb2">
-                            <size key="itemSize" width="141" height="161"/>
+                            <size key="itemSize" width="279" height="640"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CKw-nj-Lqp" customClass="PhotoCollectionViewCell" customModule="MyHomeWork_Interface" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="141" height="161"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContactPhotoCell" id="CKw-nj-Lqp" customClass="PhotoCollectionViewCell" customModule="MyHomeWork_Interface" customModuleProvider="target">
+                                <rect key="frame" x="48" y="0.0" width="279" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="141" height="161"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="279" height="640"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Сова" translatesAutoresizingMaskIntoConstraints="NO" id="TZd-xa-oHH">
-                                            <rect key="frame" x="5" y="2" width="131" height="129"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-on-5oP">
-                                            <rect key="frame" x="48" y="135" width="45" height="20"/>
+                                            <rect key="frame" x="117" y="436.66666666666669" width="45" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Сова" translatesAutoresizingMaskIntoConstraints="NO" id="TZd-xa-oHH">
+                                            <rect key="frame" x="27" y="207.66666666666663" width="225" height="225"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="TZd-xa-oHH" firstAttribute="top" secondItem="CKw-nj-Lqp" secondAttribute="top" constant="2" id="7jP-Nc-jID"/>
-                                    <constraint firstAttribute="trailing" secondItem="TZd-xa-oHH" secondAttribute="trailing" constant="5" id="WCm-L1-pfy"/>
-                                    <constraint firstItem="bKo-on-5oP" firstAttribute="top" secondItem="CKw-nj-Lqp" secondAttribute="top" priority="750" constant="135" id="Wsg-KU-CgG"/>
-                                    <constraint firstItem="bKo-on-5oP" firstAttribute="centerX" secondItem="CKw-nj-Lqp" secondAttribute="centerX" id="bCH-dG-9yM"/>
+                                    <constraint firstItem="TZd-xa-oHH" firstAttribute="centerX" secondItem="CKw-nj-Lqp" secondAttribute="centerX" id="1VQ-hs-owB"/>
+                                    <constraint firstItem="TZd-xa-oHH" firstAttribute="centerY" secondItem="CKw-nj-Lqp" secondAttribute="centerY" id="3La-Ga-c9C"/>
                                     <constraint firstItem="bKo-on-5oP" firstAttribute="top" secondItem="TZd-xa-oHH" secondAttribute="bottom" constant="4" id="m7H-1E-ayg"/>
-                                    <constraint firstItem="bKo-on-5oP" firstAttribute="centerX" secondItem="CKw-nj-Lqp" secondAttribute="centerX" id="uvM-rO-bsG"/>
-                                    <constraint firstItem="TZd-xa-oHH" firstAttribute="leading" secondItem="CKw-nj-Lqp" secondAttribute="leading" constant="5" id="z2Z-1L-krT"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="Name" destination="bKo-on-5oP" id="8Ig-1F-JKL"/>
@@ -254,13 +251,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FriendsName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-EA-a9e">
-                                            <rect key="frame" x="93" y="1" width="101.66666666666669" height="54.666666666666664"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FriendsName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-EA-a9e">
+                                            <rect key="frame" x="93" y="1" width="165" height="55"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ВинниПух" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-w9-izj">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="photo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-w9-izj">
                                             <rect key="frame" x="9" y="1" width="68" height="54.666666666666664"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="68" id="MAE-CI-ART"/>
@@ -278,6 +275,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ContactPhoto" destination="N9P-w9-izj" id="wTh-gl-Tj4"/>
                                     <outlet property="Name" destination="ON9-EA-a9e" id="CVZ-7i-sCG"/>
                                     <outlet property="photo" destination="N9P-w9-izj" id="iRE-G0-AgX"/>
                                 </connections>
@@ -296,7 +294,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pap-Qg-UpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7135.1999999999998" y="-158.12807881773401"/>
+            <point key="canvasLocation" x="7268" y="-160.34482758620689"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="7Co-YV-tWF">
@@ -371,7 +369,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ВинниПух" width="1280" height="720"/>
         <image name="Сова" width="225" height="225"/>
     </resources>
 </document>
