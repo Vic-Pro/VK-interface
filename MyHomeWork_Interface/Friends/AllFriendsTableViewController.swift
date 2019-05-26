@@ -55,11 +55,14 @@ class AllFriendsTableViewController: UITableViewController {
 
         let person = persons[indexPath.row]
         
-        cell.FriendsName.text = person.name
-        cell.ContactPhoto.image = person.image
+        cell.MyFriendsName.text = person.name
+        cell.MyFriendsImage.image = person.image
 
         return cell
+        
+        }
     }
+
     
 
     /*
@@ -107,4 +110,3 @@ class AllFriendsTableViewController: UITableViewController {
     }
     */
 
-}
